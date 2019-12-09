@@ -1,0 +1,61 @@
+// CSD_LAB_8 108998405 Badigineni Mukesh Kumar	header file
+#include<iostream>
+#include<string>
+//using namespace std;
+class vector {
+	int sz;
+	char* elem;
+	int heap;// pointer to elements
+public:
+	vector(int s) :sz(s), elem(new char[s]) {}; // constructor 
+	~vector(); // destructor , deallocates memory
+	void get(int n) //access: read 
+	{
+		std::cin >> n;
+	}
+	void set(int n, char v)// set values 
+	{
+		elem[n] = v;
+		v = '-';
+		std::cout << v;
+	}
+	int size() const { return sz; }
+};
+
+
+
+
+
+
+
+------------------------------------------------------
+
+
+#include <iostream>
+#include "Lab8.h"
+#include<vector>
+#include <sstream>
+#include<string>
+//using namespace std
+/*string NumberToString(int number) // #includ <sstream> to use this 
+{
+	ostringstream ss;
+	ss << number;
+	return ss.str();
+}*/
+int main()
+{
+	vector v(5);
+	//v.print(); // this should display -, -, -, -,
+	void get();
+	void set();
+	for (int i = 0; i < 5; ++i)
+	{
+		ostringstream str1;
+		string s = NumberToString(i);
+		//v.set(i, s);
+	}
+	//cout << "program end";
+
+	//v.print();// this should display 0, 1, 2, 3, 4
+}

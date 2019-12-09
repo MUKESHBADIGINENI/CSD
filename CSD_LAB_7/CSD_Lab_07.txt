@@ -1,0 +1,89 @@
+#include<iostream>
+using namespace std;
+class Shape 
+{
+public:
+
+	Shape(float x, float y);
+	Shape(){}
+	virtual void getPerimeter()
+
+	{
+		cout << "The inputs are x = ";
+	}
+};
+class Rectangle:public Shape
+{
+private:
+	float base;
+	float height;
+	float perimeter;
+public:
+	Rectangle(float a, float b, float x, float y) :Shape(x,y)
+	{
+		base = a;
+		height = b;
+	}
+	void getPerimeter()
+	{
+		perimeter = (2 * (base + height)); // Forumla for perimeter of rectangle
+		cout << "\nPerimeter of a rectangle = " << perimeter<<"\n";
+	}
+	Rectangle(){}
+};
+class Trapezoid:public Shape
+{
+private:
+	float height;
+	float edge1;
+	float edge2;
+	float edge3;
+	float edge4;
+	float area;
+	float perimeter;
+public:
+	Trapezoid(float x, float y, float a, float b, float c, float d, float h) :Shape(x, y)
+	{
+		edge1 = a;
+		edge2 = b;
+		edge3 = c;
+		edge4 = d;
+		height = h;
+	}
+	void getPerimeter( )
+	{
+		area = ((edge1 + edge2) / height);
+		perimeter = (edge3 + edge4 + (2 * (area / height)));//Perimeter of a trapezoid with 4 edges and height
+		cout << "\nThe Perimeter of trapezoid is = " << perimeter <<"\n" ;
+	}
+	Trapezoid(){}
+};
+
+
+
+//void prfloat(const Shape* s)
+//{
+	//implement this function to prfloat out its type and perimeter
+//}
+int main()
+{
+	Shape* s;
+	Rectangle r;
+	Trapezoid t;
+	s = &r;
+	
+
+	Rectangle r(8, 12, 98, 100); // (height, width, x, y)
+	s->getPerimeter();
+	//Rectangle::getPerimeter(r);
+	//This will display the message:
+	//1. I am a Rectangle! , perimeter=40
+	Trapezoid t(100, 100, 10, 5, 20, 15, 10); //(x, y,e1,e2,e3,e4,height)
+	//prfloat(t);
+	//This will display the message:
+	//1. I am a Trapezoid! , perimeter=50
+}
+
+Shape::Shape(float x, float y)
+{
+}

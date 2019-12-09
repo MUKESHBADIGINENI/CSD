@@ -1,0 +1,2 @@
+﻿ConsoleApplication4.obj : error LNK2019: unresolved external symbol "public: int & __thiscall vector::operator[](int)" (??Avector@@QAEAAHH@Z) referenced in function _main
+D:\NTUT\SEMISTER - 1\CSD\LAB\CSD_LAB_9\ConsoleApplication4\Debug\ConsoleApplication4.exe : fatal error LNK1120: 1 unresolved externals
